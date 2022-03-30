@@ -1,9 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import './App.css';
-import Pages from './components/Pages';
 import Navigation from './components/Navbar';
-import { Outlet } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -13,7 +10,6 @@ function App() {
     
     <div className="App">
       <Navigation/>
-      <Outlet />
     </div>
   )
 }
