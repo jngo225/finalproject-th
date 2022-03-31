@@ -1,7 +1,9 @@
 export default function Home() {
     return (
-        <div>
-            This is the Home
+        <div style={{background:"lightgrey"}}>
+            <hr/>
+            <h1 style={{textAlign:"center"}}>J-STOREFRONT</h1>
+            <hr/>
         </div>
 
     );
