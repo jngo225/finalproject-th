@@ -42,7 +42,6 @@ function Products(props) {
                                 </Link>
                             </div>
                             <h4>{product.title}</h4>
-                            <p>{product.description}</p>
                             <p>Price: ${product.price}</p>
                             { product.quantity > 0 && <p>Quantity: {product.quantity}</p> }
                             <hr></hr>
