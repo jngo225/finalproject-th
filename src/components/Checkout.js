@@ -2,7 +2,6 @@ import { useState, useMemo, useEffect } from "react";
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import TextField from '@mui/material/TextField';
@@ -124,60 +123,4 @@ export default function Checkout() {
 
         </Card>
     )
-
-    // return (
-    //     <>
-    //     <div>
-    //     { products.length === 0 && <h4>No items to checkout</h4> }
-    //     {
-    //         products.map((product, index) => {
-    //             return (
-    //                 <>
-    //                     <h4>{product.title}</h4>
-    //                     <p>Price: ${product.price}</p>
-    //                     <p>Quantity: {product.quantity}</p>
-    //                     <hr/>
-    //                 </>
-    //             )
-    //         })
-    //     }
-    //     </div>
-    //     { products.length !== 0 &&
-    //         <>
-    //         <div>
-    //             <b>Total:</b> ${total}
-    //         </div>
-    //         <hr/>
-    //         <div>
-    //             <h2>Shipping Information</h2>
-    //             <br/>
-    //             <table>
-    //                 <tr>
-    //                     <td>Name: </td>
-    //                     <td><input onChange={onChange} type="text" name="name" value={shippingInfo.name} required/></td>
-    //                 </tr>
-    //                 <tr>
-    //                     <td>Shipping Address: </td>
-    //                     <td><input onChange={onChange} type="text" name="shippingAddress" value={shippingInfo.shippingAddress} required/></td>
-    //                 </tr>
-    //                 <tr>
-    //                     <td>Billing Address: </td>
-    //                     <td><input onChange={onChange} type="text" name="billingAddress" value={shippingInfo.billingAddress} required/></td>
-    //                 </tr>
-    //                 <tr>
-    //                     <td>Credit Card: </td>
-    //                     <td><input onChange={onChange} type="text" name="creditCard" value={shippingInfo.creditCard} required/></td>
-    //                 </tr>
-    //             </table>
-    //             <br/>
-    //             <button onClick={onSubmit}>Submit</button>
-    //             <br/>
-    //             <br/>
-    //             { checkoutInfo !== "" && <div>{checkoutInfo}</div>}
-    //         </div>
-    //         </>
-    //     }
-    //     </>
-    // )
-
 }
