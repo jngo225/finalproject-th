@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Home from './Home';
@@ -37,26 +34,34 @@ export default function Navigation() {
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
+            <Button
+              href="/"
+              sx={{ my: 2, color: "white", display: 'flex' }}
+            >
+              JN-STOREFRONT
+            </Button>
+
+
+            {/* <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
             >
               JN-STOREFRONT
-            </Typography>
+            </Typography> */}
 
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              { pages.map((page) => (
-                  <Button
-                    href={page.target}
-                    sx={{ my: 2, color: "white", display: 'flex' }}
-                    name={page.label}
-                  >
-                    {page.label}
-                  </Button>
+              {pages.map((page) => (
+                <Button
+                  href={page.target}
+                  sx={{ my: 2, color: "white", display: 'flex' }}
+                  name={page.label}
+                >
+                  {page.label}
+                </Button>
               ))}
-          </Box>
+            </Box>
 
           </Toolbar>
         </Container>
@@ -65,42 +70,15 @@ export default function Navigation() {
       <div>
         <Router>
           <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path="/products" element={<Products/>}/>
-              <Route path="/products/:id" element={<ProductDetails/>}/>
-              <Route path="/cart" element={<Cart/>}/>
-              <Route path="/checkout" element={<Checkout/>}/>
-              <Route path="*" element={<NotFound/>}/>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </div>
     </>
-    
-//     <Router>
-//     <div className="Navigation">
-// <>
-//   <Navbar bg="dark" variant="dark">
-//     <Container>
-//     <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
-//     <Nav className="me-auto">
-//       <Nav.Link as={Link} to="/products">Products</Nav.Link>
-//       <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
-//       <Nav.Link as={Link} to="/checkout">Checkout</Nav.Link>
-//     </Nav>
-//     </Container>
-//   </Navbar>
-// </>
-// <div>
-//     <Routes>
-//         <Route path="/" element={<Home/>}/>
-//         <Route path="/products" element={<Products/>}/>
-//         <Route path="/products/:id" element={<ProductDetails/>}/>
-//         <Route path="/cart" element={<Cart/>}/>
-//         <Route path="/checkout" element={<Checkout/>}/>
-//         <Route path="*" element={<NotFound/>}/>
-//     </Routes>
-// </div>
-//     </div>
-// </Router>
-    );
+  );
 }
